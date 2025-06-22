@@ -5,16 +5,6 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from PySide6.QtGui import QIcon
 
-# Chuyển đổi file .ui sang .py trước khi import
-ui_file = "main.ui"
-py_file = "main_ui.py"
-
-if not os.path.exists(py_file) or os.path.getmtime(ui_file) > os.path.getmtime(py_file):
-    subprocess.run([
-        r"C:\Users\Pht Technolory\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts\pyside6-uic.exe",
-        ui_file, "-o", py_file
-    ])
-
 from PySide6.QtWidgets import QApplication, QMainWindow, QDialog, QVBoxLayout
 from main_ui import Ui_MainWindow
 
